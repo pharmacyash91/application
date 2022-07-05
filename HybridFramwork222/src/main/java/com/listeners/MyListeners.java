@@ -32,6 +32,7 @@ public class MyListeners extends BaseClass implements ITestListener{
 	}
 
 	public void onTestSkipped(ITestResult result) {
+		System.out.println("onTestSkipped");
 		test.log(Status.SKIP, "test case skiped with name as"+result.getName());
 
 		
