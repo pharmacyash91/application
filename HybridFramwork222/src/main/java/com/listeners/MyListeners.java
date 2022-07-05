@@ -24,6 +24,7 @@ public class MyListeners extends BaseClass implements ITestListener{
 	}
 
 	public void onTestFailure(ITestResult result) {
+		System.out.println("onTestFailure");
 		test.log(Status.FAIL, "test case Failed with name as"+result.getName());
 		String path = driverUtils.getScreenshot(result.getName());
 		test.addScreenCaptureFromPath(path);
